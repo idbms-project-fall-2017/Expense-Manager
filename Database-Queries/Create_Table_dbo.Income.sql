@@ -6,7 +6,8 @@ CREATE TABLE dbo.Income (
 	Check (Amount>0),
 	Type_Income varchar(50) NOT NULL,
 	CreatedAt date NOT NULL DEFAULT GETDATE(),
-	Username varchar(255) NOT NULL FOREIGN KEY REFERENCES dbo.User_Profile(Username)
+	Username varchar(255) NOT NULL,
+	FOREIGN KEY (Username,AccountType) REFERENCES dbo.Account(Username,AccountType)
 );
 
 DROP TABLE dbo.Income
