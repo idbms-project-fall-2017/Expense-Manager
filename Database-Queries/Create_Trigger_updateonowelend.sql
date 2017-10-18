@@ -1,4 +1,4 @@
-CREATE TRIGGER trgAfterUpdateonOweLend ON [ExpenseManager].[dbo].[Expense] 
+CREATE TRIGGER trgAfterUpdateonOweLend ON [ExpenseManager].[dbo].[OweLend] 
 FOR INSERT
 AS
 	declare @status varchar(50);
